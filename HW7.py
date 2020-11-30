@@ -38,8 +38,7 @@ class NuclearAcid:
 
 class DNA(NuclearAcid):
     def __init__(self, chain, __set_of_bases={'A', 'T', 'G',
-                                              'C'}):  # понимаю, что ставить изменияемые величины по умолчанию в функции
-        # плохо, но мы не производим никаких действий по их изменению
+                                              'C'}):  
         if not set(chain).issubset(__set_of_bases):
             raise ExcessSymbolError(
                 'В введенной строке есть символы, не содержащиеся в ДНК')
